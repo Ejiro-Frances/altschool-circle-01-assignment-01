@@ -51,7 +51,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 ## Circle One members
 
 - Busari Olanrewaju
-- Name
+- Reuben Agbor
 - Name
 - Name
 - Name
@@ -312,4 +312,6 @@ Arrow Function IIFE
   console.log("Arrow function IIFE");
 })(); // Arrow function IIFE
 ```
+---
+src: ./pages/promises.md
 ---
