@@ -17,13 +17,11 @@ hideInToc: true
 - <a href="" @click="$nav.go(27)">Microtasks</a>
 - <a href="" @click="$nav.go(29)">Async/await</a>
 
----
 
+---
 hideInToc: true
 class: text-sm
 scrollable: true
-6
-
 ---
 
 ## Introduction: callbacks
@@ -136,13 +134,10 @@ function step1(error, script) {
 
 Promises are a better way to handle asynchronous code and avoid the pyramid of doom.
 
----
 
+---
 hideInToc: true
 class: text-sm
-
-# scrollable: true
-
 ---
 
 ## Promise
@@ -166,8 +161,8 @@ The Promise object has internal properties:
 - `result`: Initially `undefined`, then the `value` passed to `resolve` or the `error` passed to `reject`.
 
 ---
-
-## class: text-sm
+class: text-sm
+---
 
 Here's an example of a successful Promise:
 
@@ -197,8 +192,8 @@ This code will set the promise to rejected after 1 second.
 - You can call `resolve` or `reject` immediately, without a delay.
 
 ---
-
-## class: text-sm
+class: text-sm
+---
 
 The `state` and `result` are internal, so you can't directly access them.
 
@@ -233,8 +228,9 @@ promise.catch(alert); // shows "Error: Whoops!" after 1 second
 ```
 
 ---
-
-## hideInToc: true
+hideInToc: true
+class: text-sm
+---
 
 ## Promises chaining
 
@@ -332,11 +328,11 @@ loadJson("/article/promise-chaining/user.json")
 
 Key takeaway: Return promises (or thenables) from `.then` handlers for sequential asynchronous operations.
 
+
+
 ---
-
 hideInToc: true
-class: text-sm scrollable
-
+class: text-sm
 ---
 
 ## Error handling with promises
@@ -351,7 +347,7 @@ fetch("https://no-such-server.blabla")
 
 Basically, there's like a "try...catch" built-in around promise code. So if something throws an error inside a promise, it automatically becomes a rejected promise.
 
-```javascript {all}{maxHeight:'120px'}
+```javascript {5|all}{maxHeight:'120px'}
 new Promise((resolve, reject) => {
   throw new Error("Whoops!");
 }).catch(alert);
@@ -365,7 +361,7 @@ new Promise((resolve, reject) => {
 
 If you throw an error in a `.then`, it's like rejecting the promise.
 
-```javascript {all}
+```javascript {5|all}{maxHeight:'100px'}
 new Promise((resolve, reject) => {
   resolve("ok");
 })
@@ -376,8 +372,8 @@ new Promise((resolve, reject) => {
 ```
 
 ---
-
-## class: text-sm
+class: text-sm
+---
 
 If the `.catch` cannot handle the error, rethrow it. Error handling propagates up the chain until it is handled.
 
@@ -417,10 +413,8 @@ new Promise(function () {
 So, use `.catch` where you know how to deal with errors, and rethrow errors that the block doesn't know how to handle. If you can't recover, it's okay to not use `.catch`, but always have `unhandledrejection` to prevent app crashing.
 
 ---
-
 hideInToc: true
 class: text-sm
-
 ---
 
 ## Promise API
@@ -450,7 +444,7 @@ Promise.allSettled([Promise.resolve(1), Promise.reject("Error")]).then(
 
 - **`Promise.race(iterable)`:** Waits for the _first_ promise to settle. Returns its result/error.
 
-```javascript {all}
+```javascript {3|all}{maxHeight:'100px'}
 Promise.race([
   new Promise((resolve) => setTimeout(() => resolve(1), 1000)),
   Promise.reject(new Error("Whoops!")),
@@ -459,15 +453,12 @@ Promise.race([
 
 - **`Promise.any(iterable)`:** Waits for the _first_ promise to fulfill (resolve). Returns its result. If all reject, rejects with `AggregateError`.
 
-```javascript {5|all}{maxHeight:'100px'}
+```javascript {1|all}{maxHeight:'200px'}
 Promise.any([Promise.reject("Error1"), Promise.resolve(1)]).then(alert); // 1
 ```
 
 ---
-
-hideInToc: true
 class: text-sm
-
 ---
 
 - **`Promise.resolve(value)`:** Creates a resolved promise with `value`.
@@ -482,10 +473,8 @@ class: text-sm
 - `Promise.resolve`/`Promise.reject`: Less common due to async/await.
 
 ---
-
 hideInToc: true
 class: text-sm
-
 ---
 
 ## Promisification
@@ -510,8 +499,8 @@ function loadScript(src, callback) {
 ```
 
 ---
-
-## class: text-sm
+class: text-sm
+---
 
 This `loadScript` function uses a callback. To promisify it, we can create a wrapper:
 
@@ -581,10 +570,8 @@ function promisify(f, manyArgs = false) {
 This version either returns a single result if the original callback returns only 1 result or an array of results if the original callback returns multiple results.
 
 ---
-
 hideInToc: true
 class: text-sm
-
 ---
 
 ## Microtasks
@@ -600,8 +587,8 @@ alert("code finished");
 In this example, `"code finished"` alerts first because promise handlers go into a "microtask queue" (also called `PromiseJobs` in the ECMA specification). This queue is FIFO. The JavaScript engine only runs these microtasks after the current code finishes executing. So, after the `alert("code finished")` line runs, the engine checks the microtask queue and then runs the `.then` handler.
 
 ---
-
-## class: text-sm
+class: text-sm
+---
 
 If you want to control the order, chain `.then` calls:
 
