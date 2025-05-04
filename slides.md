@@ -53,7 +53,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 - Busari Olanrewaju
 - Reuben Agbor
 - Ejiro Francess Ejoh
-- Name
+- Elinah Mmbone
 - Name
 - Name
 - Name
@@ -334,6 +334,10 @@ Arrow Function IIFE
 ```
 ---
 src: ./pages/promises.md
+---
+
+---
+src: ./pages/events.md
 ---
 
 ---
