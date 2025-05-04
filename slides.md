@@ -56,6 +56,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 - Elinah Mmbone
 - Ejiro Francess Ejoh
 - Salaudeen Rukayat Temitope
+- Doris Senyah Afriyie
 - Name
 - Name
 - Name
@@ -336,4 +337,8 @@ src: ./pages/promises.md
 
 ---
 src: ./pages/events.md
+---
+
+---
+src: ./pages/modules.md
 ---
