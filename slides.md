@@ -51,11 +51,11 @@ The last comment block of each slide will be treated as slide notes. It will be 
 ## Circle One members
 
 - Busari Olanrewaju
+- Esther Oluwatimilehin
 - Reuben Agbor
 - Elinah Mmbone
 - Ejiro Francess Ejoh
-- Name
-- Name
+- Salaudeen Rukayat Temitope
 - Name
 - Name
 - Name
@@ -330,6 +330,292 @@ Arrow Function IIFE
   console.log("Arrow function IIFE");
 })(); // Arrow function IIFE
 ```
+---
+src: ./pages/loops.md
+---
+---
+
+# Array
+
+<v-click>Understanding arrays in JavaScript</v-click>
+
+---
+
+## What is an Array?
+In JavaScript, an **array** is a special variable that can hold more than one value at a time. These values can be of any data type, including numbers, strings, and even other arrays.
+
+You can think of an array as a data structure that stores list of items. Instead of creating seperate variables for each items:
+
+```js
+let item1 = "Pen" ;
+let item2 = "Book";
+let item3 = "Ruler";
+```
+
+You can just do this instead:
+
+```js
+let items = ["Pen", "Book", "Ruler"];👍
+let again=1;
+```
+
+It's like a container that stores values in a specific order.
+
+---
+
+## Why Use Array?
+
++ To group related data
+- To loo through data easily
++ To manage list (e.g. a list of users, scores, products)
+
+
+Imagine trying to store 100 scroes without an array 😫
+
+---
+
+## Array Declaration
+
+There are two syntaxes to create an empty array namely sqauare bracket notation [] and Array Constructor.
+
+### Array Literal (Square Bracket Notation)
+
+```js
+let arr = []; //this is an empty array
+
+let myArr = ["Apple", "Orange", "Pear"];
+
+```
+
+<v-click>
+<h1></h1>
+
+### Array Constructor 
+
+```js
+let arr = new Array(); //this is an empty array
+
+let myArr = new Array("Apple", "Orange", "Pear")
+```
+
+The array literal ```[]``` is the most commonly used syntax.
+
+</v-click>
+
+<div v-click class="text-xl">
+
+⚠️ ***Warning***
+
+Note: Using the literal from ```[]``` is preferred because it is simpler and less error-prone.
+
+</div>
+
+---
+
+## Accessing Array Elements
+
+In JavaScript, array elements are indexed starting from zero, meaning the first element has an index of 0, the second 1, and so on.
+To access a specific element in an array, use square brackets ([]) with the index number of the element you want.
+
+```js
+let fruits = ["Apple", "Orange", "Pear"];
+console.log(fruits[0]); // Output: Apple
+console.log(fruits[2]); // Output: Pear
+```
+You can modify the elements in an array by assigning the value of a specific index.
+
+***Example***: Let's modify the first index ```Apple``` to ```Banana```
+
+```js
+fruits[0] = "Banana"
+
+console.log(fruits[0]); // Output: Apple
+
+console.log(fruits); // Output: ["Banana", "Orange", "Pear"]
+
+```
+---
+
+- **Array Length**
+
+The ```.length``` property of an array returns the total number of elements in the array. 
+
+```js
+let fruits = ["Apple", "Orange", "Pear"];
+console.log(fruits.length); // Output: 3
+
+```
+<p></p>
+
+### Array Methods
+
+Array methods are built in functions in JavaScript that allow you to manipulate and interact with data stored in arrays easily.
+You can use them to add, remove, modify, rearrange or search array elements.
+
+Some commonly used array methods are:
+ 
+**push()** - Adds elements to the end of an array
+
+```js
+let fruits = ["Apple", "Orange", "Pear"];
+fruits.push("Strawberry");
+
+console.log(fruits);
+
+// Output: ["Apple", "Orange", "Pear", "Strawberry"]
+```
+---
+
+### **Array Method Contd.**
+
+<div class="grid grid-cols-2 gap-4">
+
+<div>
+
+**pop()** - Removes the last elements from an array
+
+```js
+fruits.pop(); // Output: "Strawberry"
+console.log(fruits);
+// Output: ["Apple", "Orange", "Pear"]
+```
+
+**shift()** - Removes the first elements from an array
+
+```js
+fruits.shift(); // Output: "Apple"
+console.log(fruits);
+// Output: ["Orange", "Pear"]
+```
+
+**unshift()** - Adds elements to the beginning of an array
+
+```js
+fruits.unshift("Strawberry", "Banana");
+
+console.log(fruits);
+
+// Output: ["Strawberry", "Banana", "Orange", "Pear"]
+
+```
+</div>
+
+<div>
+
+**slice()** - Returns selected elements in an array as a new array
+
+```js
+const newFruits = fruits.slice(0, 2);
+
+console.log(newFruits);
+
+// Output: ["Strawberry", "Banana"]
+
+```
+
+**reverse()** - Reverses the order of the elements in an array
+
+```js
+fruits. reverse()
+
+onsole.log(fruits);
+
+// Output: ["Pear", "Orange" "Banana", "Strawberry"]
+
+```
+
+</div>
+
+</div>
+
+---
+
+# Objects
+
+Objects are data types used to store data in **key: value pair**. It is used to group  related data in a single variable.
+
+```js
+ let user = {
+  name: "Zara",
+  age: 35,
+  isAdmin: true,
+ }
+```
+
+Each ```key``` is also called a property, and it is associated value can be any data type: string, number, array, function etc.
+
+#### Objects can be created in two ways:
+
+1. Using Object Literals
+```js
+// Using object literal
+ let user = {}
+
+```
+2. Object Constructor
+
+```js
+//Using Object Constructor
+ let user = new Object()
+```
+---
+
+### **Acessing Object Properties**
+
+To access a proper of an object, you can use **dot notation** or **bracket notation**. Dot notation is the most commint way to access property.
+
+```js
+//Using Dot Notation
+
+console.log(user.name);
+// output : "Zara"
+
+```
+```js
+//Using Bracket Notation
+
+console.log(user["user"]);
+// output : "Zara"
+```
+
+Bracket notation is useful when you want to access a propery name stored in a variable.
+
+```js
+const key = "age";
+
+console.log(user[key]);
+
+// output : "Zara"
+```
+---
+
+You can add, remove or modify object anytime.
+
+```js
+user.age = 30; // modify the age property
+user.location = "Lagos"; // add new property and value
+delete user.isAdmin // delete the property
+console.log(user);
+
+//output: {name: "Zara", age: 30, location: "Lagos}
+```
+
+Objects can also contain functions, which are called **methods**. Object methods are actions that can be performed on objects.
+
+```js
+ let person ={
+  firstName: "Zara",
+  lastName: "Joel",
+  age: 15,
+  greet: function() {
+    console.log("Hello, my name is " + this.firstName + " " + this.lastName)
+  }
+ }
+ person.greet(); // output: Hello, my name is Zara Joel
+```
+
+ ```this``` keyword in this example refers to the ```person``` object
+
 
 ---
 src: ./pages/promises.md
@@ -372,6 +658,7 @@ async function fetchData() {
   console.log(data);
 }
 ```
+
 
 ---
 
@@ -431,92 +718,4 @@ runDemo();
 ---
 src: ./pages/events.md
 ---
----
-
-# MODULES AND BUNDLERS
-
-# WHAT ARE MODULES
-
-Modules are individual files of code that each handle a specific part of your application. They allow you to break your code into smaller, reusable pieces instead of writing everything in one large file.
-
-# Example
-
-```js
-// math.js
-export function add(a, b) {
-  return a + b;
-}
-
-
-// app.js
-import { add } from './math.js';
-console.log(add(2, 3)); // Output: 5
-```
-
-# what do we use modules for?
-
-Modules allow you to break large codebases into smaller, logical pieces (e.g., files or components).
-Each module handles one specific task or feature.
-
-```js
-
-// math.js
-export function add(a, b) {
-  return a + b;
-}
-
-// app.js
-import { add } from './math.js';
-console.log(add(2, 3)); // 5
-```
-
-Makes Code Reusable :Functions, classes, or constants defined in one module can be imported and reused anywhere. This reduces duplication and improves consistency
-
-
---- 
-
-# What is a Bundler? 
-A bundler is a tool that takes all your JavaScript (or other types of) files and combines them into one or a few files that a browser can run efficiently.
-
-A bundler:
-
-Resolves all your imports and dependencies
-
-It figures out what each file needs and pulls it together into one place.
-
-Combines all modules into one (or a few) files
-
----
-
-CONTINUED
-# Example 
-before bundling: multiple files
-
-
-```js
-// utils.js
-export function greet(name) {
-  return `Hello, ${name}`;
-}
-
-// main.js
-import { greet } from './utils.js';
-console.log(greet('Doris'));
-```
-
-After bundline- single file
-
-```js
-function greet(name) {
-  return `Hello, ${name}`;
-}
-console.log(greet('Doris'));
-```
-
-
-
-
-
-
-
 
