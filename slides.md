@@ -322,14 +322,19 @@ Arrow Function IIFE
   console.log("Arrow function IIFE");
 })(); // Arrow function IIFE
 ```
+
+---
+src: ./pages/array.md
+---
+
+---
+src: ./pages/loops.md
+---
+
 ---
 src: ./pages/promises.md
 ---
 
 ---
 src: ./pages/events.md
----
-
----
-src: ./pages/loops.md
 ---
