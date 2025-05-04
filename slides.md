@@ -51,11 +51,11 @@ The last comment block of each slide will be treated as slide notes. It will be 
 ## Circle One members
 
 - Busari Olanrewaju
+- Esther Oluwatimilehin
 - Reuben Agbor
 - Elinah Mmbone
 - Ejiro Francess Ejoh
 - Salaudeen Rukayat Temitope
-- Name
 - Name
 - Name
 - Name
@@ -330,10 +330,9 @@ Arrow Function IIFE
   console.log("Arrow function IIFE");
 })(); // Arrow function IIFE
 ```
-
 ---
-layout: center
-
+src: ./pages/loops.md
+---
 ---
 
 # Array
@@ -365,8 +364,6 @@ It's like a container that stores values in a specific order.
 ---
 
 ## Why Use Array?
-
-<p></p>
 
 + To group related data
 - To loo through data easily
@@ -491,7 +488,6 @@ console.log(fruits);
 // Output: ["Orange", "Pear"]
 ```
 
-
 **unshift()** - Adds elements to the beginning of an array
 
 ```js
@@ -549,6 +545,7 @@ Objects are data types used to store data in **key: value pair**. It is used to 
 Each ```key``` is also called a property, and it is associated value can be any data type: string, number, array, function etc.
 
 #### Objects can be created in two ways:
+
 1. Using Object Literals
 ```js
 // Using object literal
@@ -556,16 +553,16 @@ Each ```key``` is also called a property, and it is associated value can be any 
 
 ```
 2. Object Constructor
+
 ```js
 //Using Object Constructor
  let user = new Object()
-
 ```
 ---
 
 ### **Acessing Object Properties**
 
-To access a proper of an obkect, you can use **dot notation** or **bracket notation**. Dot notation is the most commint way to access property.
+To access a proper of an object, you can use **dot notation** or **bracket notation**. Dot notation is the most commint way to access property.
 
 ```js
 //Using Dot Notation
@@ -582,6 +579,7 @@ console.log(user["user"]);
 ```
 
 Bracket notation is useful when you want to access a propery name stored in a variable.
+
 ```js
 const key = "age";
 
@@ -617,6 +615,7 @@ Objects can also contain functions, which are called **methods**. Object methods
 ```
 
  ```this``` keyword in this example refers to the ```person``` object
+
 
 ---
 src: ./pages/promises.md
@@ -659,6 +658,7 @@ async function fetchData() {
   console.log(data);
 }
 ```
+
 
 ---
 
@@ -718,3 +718,4 @@ runDemo();
 ---
 src: ./pages/events.md
 ---
+
