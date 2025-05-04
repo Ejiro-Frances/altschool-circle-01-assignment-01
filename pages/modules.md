@@ -1,4 +1,3 @@
----
 
 # MODULES AND BUNDLERS
 
@@ -48,18 +47,17 @@ A bundler is a tool that takes all your JavaScript (or other types of) files and
 
 A bundler:
 
-Resolves all your imports and dependencies
+- Resolves all your imports and dependencies
 
-It figures out what each file needs and pulls it together into one place.
+- It figures out what each file needs and pulls it together into one place.
 
-Combines all modules into one (or a few) files
+- Combines all modules into one (or a few) files
 
 ---
 
-CONTINUED
 # Example 
-before bundling: multiple files
 
+before bundling: multiple files
 
 ```js
 // utils.js
@@ -80,4 +78,3 @@ function greet(name) {
 }
 console.log(greet('Doris'));
 ```
-=======
