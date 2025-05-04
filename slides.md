@@ -51,11 +51,11 @@ The last comment block of each slide will be treated as slide notes. It will be 
 ## Circle One members
 
 - Busari Olanrewaju
+- Esther Oluwatimilehin
 - Reuben Agbor
 - Elinah Mmbone
 - Ejiro Francess Ejoh
 - Salaudeen Rukayat Temitope
-- Name
 - Name
 - Name
 - Name
@@ -322,13 +322,12 @@ Arrow Function IIFE
   console.log("Arrow function IIFE");
 })(); // Arrow function IIFE
 ```
+---
+src: ./pages/loops.md
+---
 
 ---
 src: ./pages/array.md
----
-
----
-src: ./pages/loops.md
 ---
 
 ---

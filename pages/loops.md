@@ -11,7 +11,7 @@ Let's break down what a loop looks like by identifying its three key parts: init
 <div grid="~ cols- gap-2" m="t-2">
 
 ```js
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {s
   console.log("Loop number:", i);
 } 
 // Loop number: 0, Loop number: 1, Loop number: 2,  Loop number: 3, Loop number: 4
