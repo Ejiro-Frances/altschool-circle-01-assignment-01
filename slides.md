@@ -52,11 +52,9 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 - Busari Olanrewaju
 - Reuben Agbor
-- Ejiro Francess Ejoh
 - Elinah Mmbone
-- Name
-- Name
-- Name
+- Ejiro Francess Ejoh
+- Salaudeen Rukayat Temitope
 - Name
 - Name
 - Name
@@ -289,14 +287,6 @@ processArray(numbers, printElement);
 // Output:
 //
 ```
-
----
-
-# new
-
-dragPos:
-square: -55,0,0,0
-
 ---
 
 # Immediately invoked Function Expression
@@ -340,3 +330,6 @@ src: ./pages/promises.md
 src: ./pages/events.md
 ---
 
+---
+src: ./pages/loops.md
+---
