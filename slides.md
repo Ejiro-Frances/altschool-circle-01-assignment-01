@@ -340,6 +340,3 @@ src: ./pages/promises.md
 src: ./pages/events.md
 ---
 
----
-src: ./pages/events.md
----

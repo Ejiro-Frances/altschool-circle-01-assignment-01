@@ -9,13 +9,13 @@ hideInToc: true
 <div mt-2 />
 
 - <a href="" @click="$slidev.nav.next()">Introduction: callbacks</a>
-- <a href="" @click="$nav.go(17)">Promise</a>
-- <a href="" @click="$nav.go(20)">Promises Chaining</a>
-- <a href="" @click="$nav.go(21)">Error handling with promises</a>
-- <a href="" @click="$nav.go(23)">Promise API</a>
-- <a href="" @click="$nav.go(25)">Promisification</a>
-- <a href="" @click="$nav.go(27)">Microtasks</a>
-- <a href="" @click="$nav.go(29)">Async/await</a>
+- <a href="" @click="$nav.go(15)">Promise</a>
+- <a href="" @click="$nav.go(18)">Promises Chaining</a>
+- <a href="" @click="$nav.go(19)">Error handling with promises</a>
+- <a href="" @click="$nav.go(21)">Promise API</a>
+- <a href="" @click="$nav.go(23)">Promisification</a>
+- <a href="" @click="$nav.go(25)">Microtasks</a>
+- <a href="" @click="$nav.go(27)">Async/await</a>
 
 
 ---
@@ -607,4 +607,6 @@ window.addEventListener("unhandledrejection", (event) => alert(event.reason));
 
 In this example, the `unhandledrejection` event will fire and show the error message. Even if you add a `.catch` later using `setTimeout`, it's too late; the event has already triggered.
 
+---
+src: ./async-await.md
 ---
