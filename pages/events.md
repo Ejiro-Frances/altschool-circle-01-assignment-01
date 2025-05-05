@@ -3,11 +3,14 @@ layout: center
 transition: fade-out
 ---
 
-# Events
+# [Events]{.text-teal-400}
 
 ---
+hideInToc: true
+class: text-sm
+---
 
-# What is an Event
+# [What is an Event]{.text-teal-400}
 
 An event is an action or occurrence that happens in the browser and can be detected by JavaScript.
 
@@ -15,7 +18,7 @@ It is like a `signal` that something has happened.
 
 All DOM nodes generate such signals when we interact with them or the browser does something with them.
 
-## Examples of Events
+## [Examples of Events]{.text-teal-300}
 
 <br>
 
@@ -26,8 +29,10 @@ All DOM nodes generate such signals when we interact with them or the browser do
 - CSS events e.g when a CSS-animation finishes.
 
 ---
+class: text-sm
+---
 
-## Common Types of Events
+## [Common Types of Events]{.text-teal-300}
 
 | Event Type           | Description                 |
 | -------------------- | --------------------------- |
@@ -40,10 +45,11 @@ All DOM nodes generate such signals when we interact with them or the browser do
 | `change`             | Form input field is changed |
 
 ---
+hideInToc: true
+class: text-sm
+---
 
-# Event Handlers
-
-<br>
+# [Event Handlers]{.text-teal-400}
 
 Handlers are functions that run in response to events.
 
@@ -68,18 +74,16 @@ For instance, to assign a click handler for an input using html attribute, we ca
 ```
 
 ---
+class: text-sm
+---
 
-## Assign Handlers by DOM property
+## [Assign Handlers by DOM property]{.text-teal-300}
 
 DOM properties are assigned to event handlers. They are not strings like HTML attributes, they are functions.
 
 - DOM-property case matters: 
 
-<br>
-
 Assign a handler to elem.onclick, not elem.ONCLICK, because DOM properties are case-sensitive.
-
-<br>
 
 ```html
 <button id="elem">Click me</button>
@@ -90,16 +94,14 @@ Assign a handler to elem.onclick, not elem.ONCLICK, because DOM properties are c
 </script>
 ```
 ---
+class: text-sm
+---
 
 ### Note:
 
 `The onclick property in JavaScript can only store one function at a time. If you assign a new function to it, it replaces the old one.`
 
-<br>
-
 In the example below adding a handler with JavaScript overwrites the existing handler:
-
-<br>
 
 ```html
 <input type="button" id="elem" onclick="alert('Before')" value="Click me" />
@@ -112,27 +114,23 @@ In the example below adding a handler with JavaScript overwrites the existing ha
 </script>
 ```
 
-<br>
-
 - To attach multiple handlers without overwriting, use addEventListener() instead
 
 ---
+class: text-sm
+---
 
-## Assign Handlers using addEventListener
+## [Assign Handlers using addEventListener]{.text-teal-300}
 
 The <span class="bg-black text-purple-400 py-0.5 px-1.5 rounded-md">addEventListener</span> method allows us to add multiple handlers on the same event, with additional configuration options and ability to remove them with <span class="bg-black text-purple-400 py-0.5 px-1.5 rounded-md">removeEventListener</span>
 
 The syntax to add or remove a handler is:
 
-<br>
-
 ```js
 element.addEventListener(event, handler, [options | useCapture]);
 
-
 element.removeEventListener(event, handler, [options | useCapture]);
 ```
-<br>
 
 - event: type of event to listen for, e.g. `click`
 
@@ -140,13 +138,9 @@ element.removeEventListener(event, handler, [options | useCapture]);
 
 - options: additional options like <span class="bg-black text-purple-400 py-0.5 px-1.5 rounded-md">once</span>, <span class="bg-black text-purple-400 py-0.5 px-1.5 rounded-md">capture</span>, <span class="bg-black text-purple-400 py-0.5 px-1.5 rounded-md">passive</span>, <span class="bg-black text-purple-400 py-0.5 px-1.5 rounded-md">signal</span> or useCapture - boolean, if true, then the handler is set on the capturing phase, otherwise the bubbling phase.
 
----
+#### Examples
 
-## Examples
-
-<br>
-
-```js
+```js {2|5|9|all}{maxHeight: '120px'}
 elem.addEventListener("click", function () {
   alert("First handler");
 });
@@ -160,8 +154,9 @@ button.addEventListener("click", () => {
   alert("Button was clicked!");
 });
 ```
-
 --- 
+class: text-sm
+---
 
 ## Note: 
 - To remove a handler – assign elem.onclick = null.
@@ -169,17 +164,12 @@ button.addEventListener("click", () => {
 
 For instance, the DOMContentLoaded event, that triggers when the document is loaded and the DOM has been built.
 
-<br>
-
 ```js
 // will never run
 document.onDOMContentLoaded = function () {
   alert("DOM built");
 };
 ```
-
-<br>
-
 ```js
 // this way it works
 document.addEventListener("DOMContentLoaded", function () {
@@ -188,23 +178,20 @@ document.addEventListener("DOMContentLoaded", function () {
 ```
 
 ---
-
-# Event Objects
-
+class: text-sm
 ---
 
-## The Event Object
+## [The Event Object]{.text-teal-300}
 
 When an event occurs, JavaScript creates an event object that contains information about the event.
 
-#### Common Properties of Event Objects
+#### [Common Properties of Event Objects]{.text-teal-200}
 
 - event.type – type of event (e.g., "click")
 - event.target – the element that triggered the event
 - event.preventDefault() – stops default behavior
 - event.key – key pressed (for keyboard events)
 
-<br>
 ```html
 <input type="text" id="myInput" placeholder="Type something..." />
 
@@ -217,13 +204,13 @@ When an event occurs, JavaScript creates an event object that contains informati
 </script>
 ```
 
-##### Output: If user presses "A", it logs: You pressed: A
+ Output: If user presses "A", it logs: You pressed: A
 
+---
+class: text-sm
 ---
 
 ## More Code Examples
-
-<br>
 
 ```html
 <form id="myForm">
@@ -237,20 +224,17 @@ document.querySelector("#myForm").addEventListener("submit", function (event) {
 });
 
 ```
-<br>
 
-##### The event object is also available in the html attribute
-
-<br>
+The event object is also available in the html attribute
 
 ```html
 <input type="button" onclick="alert(event.type)" value="Event type" />
 ```
 ---
+class: text-sm
+---
 
-## Object handlers: handleEvent
-
-<br>
+## [Object handlers: handleEvent]{.text-teal-300}
 
 We can assign not just a function, but an object as an event handler using addEventListener. When an event occurs, its handleEvent method is called.
 
@@ -272,13 +256,14 @@ For instance:
 
 ```
 
-<br>
-
-As we can see, when addEventListener receives an object as the handler, it calls obj.handleEvent(event) in case of an event.
+As we can see, when `addEventListener` receives an object as the handler, it calls obj.handleEvent(event) in case of an event.
 
 ---
+hideInToc: true
+class: text-sm
+---
 
-# Event Propagation
+# [Event Propagation]{.text-teal-300}
 
 The standard DOM Events describes 3 phases of event propagation:
 
@@ -286,18 +271,11 @@ The standard DOM Events describes 3 phases of event propagation:
 - Target phase – the event reached the target element.
 - Capturing phase – the event goes down to the element.
 
-
-<br>
-
 Note that while formally there are 3 phases, the 2nd phase (“target phase”: the event reached the element) is not handled separately: handlers on both capturing and bubbling phases trigger at that phase.
 
----
-
-### Event Bubbling
+### [Event Bubbling]{.text-teal-300}
 
 Events bubble up from the target element to its ancestors.
-
-<br>
 
 When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
 
@@ -305,9 +283,9 @@ When an event happens on an element, it first runs the handlers on it, then on i
 
 For instance, a focus event does not bubble. There are other examples too, but still it’s an exception, rather than a rule, most events do bubble.
 
-
-
 ---
+class: text-sm
+--- 
 
 ### Examples
 
@@ -317,8 +295,6 @@ A click on the inner \<p> first runs onclick:
 - Then on the outer \<div>.
 - Then on the outer \<form>.
 - And so on upwards till the document object.
-
-<br>
 
 ```html
 <form onclick="alert('form')">
@@ -330,10 +306,12 @@ A click on the inner \<p> first runs onclick:
 </form>
 ```
 
-So if we click on \<p>, then we’ll see 3 alerts: p → div → form.
+So if we click on \<p>, then we'll see 3 alerts: p - div - form.
 
 The process is called “bubbling”, because events “bubble” from the inner element up through parents like a bubble in the water.
 
+---
+class: text-sm
 ---
 
 ### To stop bubbling
@@ -341,7 +319,9 @@ The process is called “bubbling”, because events “bubble” from the inner
 - use `event.stopPropagation()`.
 - `event.stopImmediatePropagation()`
 
-## For instance, here body.onclick doesn’t work if you click on \<button>:
+<br>
+
+##### For instance, here body.onclick doesn’t work if you click on \<button>:
 
 <br>
 
@@ -353,11 +333,10 @@ The process is called “bubbling”, because events “bubble” from the inner
 
 <br>
 
-#### However, Bubbling is convenient. Don’t stop it without a real need: obvious and architecturally well thought out.
+##### However, Bubbling is convenient. Don’t stop it without a real need: obvious and architecturally well thought out.
+<br>
 
----
-
-## Capturing
+## [Capturing]{.text-teal-300}
 
 To catch an event on the capturing phase, we need to set the handler capture option to true:
 
@@ -371,8 +350,10 @@ elem.addEventListener(..., true)
 ```
 
 ---
+class: text-sm
+---
 
-### Event Delegation
+### [Event Delegation]{.text-teal-300}
 
 The idea is that if we have a lot of elements handled in a similar way, then instead of assigning a handler to each of them – we put a single handler on their common ancestor.
 
@@ -386,7 +367,6 @@ document.querySelector("#parent").addEventListener("click", function (event) {
   }
 });
 ```
-
 
 ```html
 <ul id="menu">
@@ -403,13 +383,17 @@ document.querySelector("#parent").addEventListener("click", function (event) {
   };
 </script>
 ```
+
+---
+hideInToc: true
+class: text-sm
 ---
 
-# UI Events
+# [UI Events]{.text-teal-300}
 
 UI (User Interface) Events are a subset of browser events related to user interaction with the web page or the browser window.
 
-## Examples:
+##### Examples:
 
 - load
 - resize

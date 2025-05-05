@@ -1,21 +1,20 @@
 ---
 layout: center
 transition: fade-out
-hideInToc: true
 ---
 
-# Promises, async/await
+# [Promises, async/await]{.text-teal-400}
 
 <div mt-2 />
 
 - <a href="" @click="$slidev.nav.next()">Introduction: callbacks</a>
-- <a href="" @click="$nav.go(15)">Promise</a>
-- <a href="" @click="$nav.go(18)">Promises Chaining</a>
-- <a href="" @click="$nav.go(19)">Error handling with promises</a>
-- <a href="" @click="$nav.go(21)">Promise API</a>
-- <a href="" @click="$nav.go(23)">Promisification</a>
-- <a href="" @click="$nav.go(25)">Microtasks</a>
-- <a href="" @click="$nav.go(27)">Async/await</a>
+- <a href="" @click="$nav.go()">Promise</a>
+- <a href="" @click="$nav.go()">Promises Chaining</a>
+- <a href="" @click="$nav.go()">Error handling with promises</a>
+- <a href="" @click="$nav.go()">Promise API</a>
+- <a href="" @click="$nav.go()">Promisification</a>
+- <a href="" @click="$nav.go()">Microtasks</a>
+- <a href="" @click="$nav.go()">Async/await</a>
 
 
 ---
@@ -24,7 +23,7 @@ class: text-sm
 scrollable: true
 ---
 
-## Introduction: callbacks
+## [Introduction: callbacks]{.text-teal-300}
 
 Okay, so I learned about asynchronous programming in JavaScript using callbacks. It's about running code later, not immediately.
 
@@ -68,8 +67,10 @@ loadScript("/my/script.js", function (script) {
 ```
 
 ---
+class: text-sm
+---
 
-## Handling errors:
+## [Handling errors:]{.text-teal-300}
 
 Error handling is important. The callback function should accept an error argument, so you can check for loading errors. The "error-first callback" convention says that the first argument of the callback is reserved for error (if any).
 
@@ -94,8 +95,10 @@ loadScript("/my/script.js", function (error, script) {
 ```
 
 ---
+class: text-sm
+---
 
-## Pyramid of Doom
+## [Pyramid of Doom]{.text-teal-300}
 
 A big problem with callbacks is the "pyramid of doom" or "callback hell." When you have many nested callbacks, the code becomes hard to read and manage.
 
@@ -134,13 +137,14 @@ function step1(error, script) {
 
 Promises are a better way to handle asynchronous code and avoid the pyramid of doom.
 
+##
 
 ---
 hideInToc: true
 class: text-sm
 ---
 
-## Promise
+## [Promise]{.text-teal-300}
 
 Okay, so a Promise in JavaScript is like a way to handle something that takes time, like a singer releasing a song. Imagine a singer promising fans a new song.
 
@@ -232,7 +236,7 @@ hideInToc: true
 class: text-sm
 ---
 
-## Promises chaining
+## [Promises chaining]{.text-teal-300}
 
 Promises chaining passes results through `.then` handlers. Each `.then` returns a new promise, enabling chaining.
 
@@ -335,7 +339,7 @@ hideInToc: true
 class: text-sm
 ---
 
-## Error handling with promises
+## [Error handling with promises]{.text-teal-300}
 
 Okay, so promises are good at dealing with errors. When a promise rejects, like if a website doesn't exist, `.catch` will jump in to handle it. You don't have to put `.catch` right after the thing that might fail; it can be later in the chain.
 
@@ -417,7 +421,7 @@ hideInToc: true
 class: text-sm
 ---
 
-## Promise API
+## [Promise API]{.text-teal-300}
 
 There are 6 static methods in the `Promise` class.
 
@@ -477,7 +481,7 @@ hideInToc: true
 class: text-sm
 ---
 
-## Promisification
+## [Promisification]{.text-teal-300}
 
 Okay, so I learned about "promisification." It's basically turning a function that uses callbacks into one that returns a Promise. This is useful because Promises are often easier to work with than callbacks, especially when dealing with asynchronous operations.
 
@@ -574,7 +578,7 @@ hideInToc: true
 class: text-sm
 ---
 
-## Microtasks
+## [Microtasks]{.text-teal-300}
 
 Okay, so promises are always asynchronous. Even if a promise resolves immediately, the `.then`/`.catch`/`.finally` handlers don't run right away.
 
