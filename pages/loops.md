@@ -1,12 +1,26 @@
+---
+layout: center
+transition: fade
+---
 
-# Week 2 Month 1
+# [Loops]{.text-teal-400}
 
-## Loops
-What are loops?
-- Loops allow you to execute a block of code repeatedly.
-- Loops can also be thought of like this: Imagine you have 5 apples and you eat one every day until none are left. You're repeating the same action—eating an apple—each day, as long as apples remain. That's the essence of a loop.
+---
+class: text-sm
+transition: fade
+---
 
-### Loop Declaration
+<h2 class= "text-teal-300 mt-3">What are loops?</h2>
+
+<v-click>
+<ul class= "mt-3">
+<li>Loops allow you to execute a block of code repeatedly.</li>
+<li>Loops can also be thought of like this: Imagine you have 5 apples and you eat one every day until none are left. You're repeating the same action—eating an apple—each day, as long as apples remain. That's the essence of a loop.</li>
+</ul>
+</v-click>
+
+<v-click>
+<h4 class="text-teal-300 mt-3">Loop Declaration</h4>
 Let's break down what a loop looks like by identifying its three key parts: initialization, condition, and increment — using a for loop as an example.
 <div grid="~ cols- gap-2" m="t-2">
 
@@ -17,26 +31,31 @@ for (let i = 0; i < 5; i++) {s
 // Loop number: 0, Loop number: 1, Loop number: 2,  Loop number: 3, Loop number: 4
 ```
 </div>
----
 
 Explanation:
 - let i = 0 is the initialization. It sets the starting point (we begin couting from 0).
 - i < 5 is the condition. it keeps looping as long as i is less than 5.
 - i++ is the increment. it increases i by 1 after each loop cycle
+</v-click>
 
-## Types of loops
+
+---
+class: text-sm
+---
+
+<h3 class="text-teal-300 mt-3">Types of loops</h3>
+
 - for Loop
 - while Loop
 - do...while Loop
 - for...of Loop
 - for...in Loop
 
----
+<h4 class="text-teal-300 mt-3">For Loop</h4>
 
-# For Loop
 A for loop is used to repeat a block of code a specific number of times.
 
-### Basic Structure of a for Loop
+<h5 class="text-teal-100 mt-3">Basic Structure of a for Loop</h5>
 
 ```js
 
@@ -47,14 +66,21 @@ for (initialization; condition; increment) {
 
 ```
 
-#### Let's Break It Down:
+<h5 class="text-teal-300 mt-3">Let's Break It Down:</h5>
+
 - Initialization: set a starting point(e.g. let i = 0)
 - Condition: 	Loop continues while this is true
 - Increment: increases a variable's value by 1 every time a loop runs.
 
 ---
+class: text-sm
+transition: fade
+---
 
-# Example 1: Print Numbers 1 to 5
+<div class="grid grid-cols-2 gap-4">
+
+<div>
+<h5 class="text-teal-300 mt-3">Example 1: Print Numbers 1 to 5</h5>
 ```js
 for (let i = 1; i <= 5; i++) {
   console.log("Number:", i);
@@ -68,8 +94,11 @@ Number: 4
 Number: 5
 
 ```
+</div>
 
-### Example 2: Loop Through an Array
+<div>
+<h5 class="text-teal-300 mt-3">Example 2: Loop Through an Array</h5>
+
 ```js
 const colors = ["red", "blue", "green"];
 
@@ -83,22 +112,27 @@ blue
 green
 
 ```
+</div>
+</div>
 
----
 
-# While Loop
+<h4 class="text-teal-300 mt-3">While Loop</h4>
 A while loop is a control structure that repeats a block of code as long as a specified condition is true.
 
-### Basic structure of a while loop
+<div class="grid grid-cols-2 gap-4">
+<div>
+<h5 class="text-teal-300 mt-3">Basic structure of a while loop</h5>
 ```js
 while (condition) {
   // code to repeat
 }
 
 ```
+</div>
 
-### Example: Count from 1 to 5
-```js
+<div>
+<h5 class="text-teal-300 mt-3">Example: Count from 1 to 5</h5>
+```js {all}{maxHeight: '150px'}
 let i = 1;
 
 while (i <= 5) {
@@ -114,12 +148,17 @@ Number: 4
 Number: 5
 
 ```
+</div>
+</div>
+
+---
+class: text-sm
 ---
 
-# do...while Loop
+<h4 class="text-teal-300 mt-3">do...while Loop</h4>
 A do...while loop is similar to a while loop, but it always runs the code block at least once, even if the condition is false.
 
-### Basic structure of a do...while loop
+<h5 class="text-teal-100 mt-3">Basic structure of a do...while loop</h5>
 ```js
 do {
   // code to run at least once
@@ -127,7 +166,7 @@ do {
 
 ```
 
-### Example: Print a word 3 times
+<h5 class="text-teal-300 mt-3">Example: Print a word 3 times</h5>
 ```js
 
 let count = 0;
@@ -145,14 +184,16 @@ Hello
 
 ```
 ---
+class: text-sm
+---
 
-# for...of Loop
+<h4 class="text-teal-300 mt-3">for...of Loop</h4>
 
 The for...of loop is used to loop through the values of iterable objects like:
 
 Arrays, Strings, Sets, Maps
 
-### Basic structure of a for...of loop
+<h5 class="text-teal-300 mt-3">Basic structure of a for...of loop</h5>
 
 ```js
 for (let value of iterable) {
@@ -161,7 +202,7 @@ for (let value of iterable) {
 
 ```
 
-###  Example with an Array:
+<h5 class="text-teal-300 mt-3">Example with an Array:</h5>
 ```js
 
 const fruits = ["apple", "banana", "cherry"];
@@ -178,11 +219,14 @@ cherry
 ```
 
 ---
+class: text-sm
+---
 
-# for...in Loop
+<h4 class="text-teal-300 mt-3">for...in Loop</h4>
+
 A for...in loop is used to loop through the keys (property names) of an object.
 
-### Basic structure of a for...in loop
+<h5 class="text-teal-300 mt-3">Basic structure of a for...in loop</h5>
 ```js
 for (let key in object) {
   // code using key or object[key]
@@ -190,7 +234,7 @@ for (let key in object) {
 
 ```
 
-###  Example:
+<h5 class="text-teal-300 mt-3">Example:</h5>
 ```js
 
 const person = {

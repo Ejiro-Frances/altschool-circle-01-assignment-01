@@ -1,13 +1,21 @@
-# Understanding Async & Await
-
+---
+layout: center
+transition: fade
 ---
 
-# What is Async/Await?
+# [Understanding Async & Await]{.text-teal-400}
+
+---
+hideInToc: true
+class: text-sm
+---
+
+# [What is Async/Await?]{.text-teal-400}
 
 Async/await is a modern way to handle asynchronous code in JavaScript.  
 It makes asynchronous code look and behave like synchronous code, making it easier to read and understand.
 
-# Basic Syntax
+### [Basic Syntax]{.text-teal-300}
 
 ```js
 async function myFunction() {
@@ -19,7 +27,7 @@ async function myFunction() {
 * `async` keyword: declares an async function
 * `await`: pauses function execution until promise resolves
 
-# Fetch API Example
+### [Fetch API Example]{.text-teal-300}
 
 ```js
 async function fetchData() {
@@ -30,10 +38,13 @@ async function fetchData() {
 ```
 
 ---
+hideInToc: true
+class: text-sm
+---
 
-# Error Handling with Try...Catch
+## [Error Handling with Try...Catch]{.text-teal-400}
 
-```js {all}{maxHeight:'130px'}
+```js {all}{maxHeight:'150px'}
 async function getData() {
   try {
     const response = await fetch('https://api.example.com/data');
@@ -48,7 +59,7 @@ async function getData() {
 * Cleaner error handling
 * No `.catch()` chaining
 
-# Async/Await vs Promises
+## [Async/Await vs Promises]{.text-teal-400}
 
 | Promises           | Async/Await    |
 | ------------------ | -------------- |
@@ -58,8 +69,11 @@ async function getData() {
 
 
 ---
+hideInToc: true
+class: text-sm
+---
 
-# Key Takeaways
+# [Key Takeaways]{.text-teal-300}
 
 * Async/await simplifies asynchronous code
 * Use `await` only inside async functions
@@ -67,7 +81,7 @@ async function getData() {
 
 ##
 
-# Mini Demo: Simulate an Async Task
+# [Mini Demo: Simulate an Async Task]{.text-teal-300}
 
 ```js
 function wait(ms) {

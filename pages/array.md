@@ -3,13 +3,15 @@ layout: center
 transition: fade-out
 ---
 
-# Array
+# [Array]{.text-teal-400}
 
 <v-click>Understanding arrays in JavaScript</v-click>
 
 ---
+class: text-sm
+---
 
-## What is an Array?
+## [What is an Array?]{.text-teal-400}
 In JavaScript, an **array** is a special variable that can hold more than one value at a time. These values can be of any data type, including numbers, strings, and even other arrays.
 
 You can think of an array as a data structure that stores list of items. Instead of creating seperate variables for each items:
@@ -30,8 +32,10 @@ let again=1;
 It's like a container that stores values in a specific order.
 
 ---
+class: text-sm
+---
 
-## Why Use Array?
+## [Why Use Array?]{.text-teal-400}
 
 <p></p>
 
@@ -43,12 +47,14 @@ It's like a container that stores values in a specific order.
 Imagine trying to store 100 scroes without an array 😫
 
 ---
+class: text-sm
+---
 
-## Array Declaration
+## [Array Declaration]{.text-teal-300}
 
 There are two syntaxes to create an empty array namely sqauare bracket notation [] and Array Constructor.
 
-### Array Literal (Square Bracket Notation)
+#### [Array Literal (Square Bracket Notation)]{.text-teal-300}
 
 ```js
 let arr = []; //this is an empty array
@@ -60,7 +66,7 @@ let myArr = ["Apple", "Orange", "Pear"];
 <v-click>
 <h1></h1>
 
-### Array Constructor 
+#### [Array Constructor]{.text-teal-300} 
 
 ```js
 let arr = new Array(); //this is an empty array
@@ -81,8 +87,10 @@ Note: Using the literal from ```[]``` is preferred because it is simpler and les
 </div>
 
 ---
+class: text-sm
+---
 
-## Accessing Array Elements
+## [Accessing Array Elements]{.text-teal-400}
 
 In JavaScript, array elements are indexed starting from zero, meaning the first element has an index of 0, the second 1, and so on.
 To access a specific element in an array, use square brackets ([]) with the index number of the element you want.
@@ -105,6 +113,8 @@ console.log(fruits); // Output: ["Banana", "Orange", "Pear"]
 
 ```
 ---
+class: text-sm
+---
 
 - **Array Length**
 
@@ -117,7 +127,7 @@ console.log(fruits.length); // Output: 3
 ```
 <p></p>
 
-### Array Methods
+### [Array Methods]{.text-teal-300}
 
 Array methods are built in functions in JavaScript that allow you to manipulate and interact with data stored in arrays easily.
 You can use them to add, remove, modify, rearrange or search array elements.
@@ -135,8 +145,10 @@ console.log(fruits);
 // Output: ["Apple", "Orange", "Pear", "Strawberry"]
 ```
 ---
+class: text-sm
+---
 
-### **Array Method Contd.**
+### [Array Method Contd.]{.text-teal-300}
 
 <div class="grid grid-cols-2 gap-4">
 
@@ -200,8 +212,11 @@ onsole.log(fruits);
 </div>
 
 ---
+hideInToc: true
+class: text-sm
+---
 
-# Objects
+# [Objects]{.text-teal-300}
 
 Objects are data types used to store data in **key: value pair**. It is used to group  related data in a single variable.
 
@@ -216,6 +231,9 @@ Objects are data types used to store data in **key: value pair**. It is used to 
 Each ```key``` is also called a property, and it is associated value can be any data type: string, number, array, function etc.
 
 #### Objects can be created in two ways:
+
+<br>
+
 1. Using Object Literals
 ```js
 // Using object literal
@@ -229,8 +247,10 @@ Each ```key``` is also called a property, and it is associated value can be any 
 
 ```
 ---
+class: text-sm
+---
 
-### **Acessing Object Properties**
+### [Acessing Object Properties]{.text-teal-300}
 
 To access a proper of an obkect, you can use **dot notation** or **bracket notation**. Dot notation is the most commint way to access property.
 
@@ -256,6 +276,8 @@ console.log(user[key]);
 
 // output : "Zara"
 ```
+---
+class: text-sm
 ---
 
 You can add, remove or modify object anytime.
@@ -283,4 +305,4 @@ Objects can also contain functions, which are called **methods**. Object methods
  person.greet(); // output: Hello, my name is Zara Joel
 ```
 
- ```this``` keyword in this example refers to the ```person``` object
+```this``` keyword in this example refers to the ```person``` object
