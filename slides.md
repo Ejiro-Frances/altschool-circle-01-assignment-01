@@ -60,7 +60,7 @@ hideInToc: true
 - Ejiro Francess Ejoh
 - Salaudeen Rukayat Temitope
 - Doris Senyah Afriyie
-- Name
+- Adebomi Omodolapo Ademola
 - Name
 - Name
 
@@ -183,4 +183,8 @@ src: ./pages/events.md
 
 ---
 src: ./pages/modules.md
+---
+ 
+---
+src: ./pages/dom.md
 ---
