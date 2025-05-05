@@ -117,6 +117,3 @@ window.open('https;//www.example.com',_blank');
 
 * To get the browser's user agent
 console.log(navigator.userAgent);
-
----
-
