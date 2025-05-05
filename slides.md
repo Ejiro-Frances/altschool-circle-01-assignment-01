@@ -23,9 +23,10 @@ mdc: true
 # open graph
 # seoMeta:
 #  ogImage: https://cover.sli.dev
+hideInToc: true
 ---
 
-# Circle one
+# [Circle one]{.text-8xl.font-hand.text-teal-900}
 
 Presentation slides for Assignment one
 
@@ -47,8 +48,10 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
+hideInToc: true
+---
 
-## Circle One members
+## [Circle One members]{.text-teal-400}
 
 - Busari Olanrewaju
 - Esther Oluwatimilehin
@@ -62,20 +65,24 @@ The last comment block of each slide will be treated as slide notes. It will be 
 - Name
 
 ---
+hideInToc: true
+---
 
-# Table of contents
+# [Table of contents]{.text-teal-400}
 
-You can use the `Toc` component to generate a table of contents for your slides:
+<!-- You can use the `Toc` component to generate a table of contents for your slides: -->
 
 <Toc minDepth="1" maxDepth="1" />
 
 ---
+class: text-sm
+---
 
-# Week 1 Month 1
+# [Introduction]{.text-teal-400}
 
 In the First Week we discussed about using Learning How To Learn, Frontend HandBook and Refactoring UI Book
 
-#### Learning How To Learn
+<h2 class= "text-teal-400">Learning How To Learn </h2>
 
 Learning how to learn means improving your ability to acquire and retain knowledge by understanding how your mind works. It involves: Metacognition: Being aware of and managing your learning strategies, Effective Techniques: Using spaced repetition, active recall, interleaving, and elaboration, Strategy Over Style: Choosing the right method for the material, not relying on learning "styles.", Feedback & Reflection: Regularly assessing and adjusting your approach, Environment & Motivation: Staying focused with clear goals and a good setup.
 
@@ -99,10 +106,10 @@ Would you like a visual cheat sheet of these principles?
 </style>
 
 ---
+class: text-sm
+---
 
-## level: 2
-
-# Frontend HandBook
+<h2 class= "text-teal-400" >Frontend HandBook </h2>
 
 The Frontend Handbook is a guide that outlines best practices, tools, and knowledge areas for frontend developers. It serves as a roadmap for learning and improving in frontend development.
 
@@ -123,9 +130,13 @@ Career & Collaboration: Offers advice on working in teams, communication, and jo
 
 It’s like a map for becoming a competent frontend developer—from beginner to advanced.
 
-## [Frontend HandBook](https://frontendmasters.com/guides/front-end-handbook/2024/)
+#### [Frontend HandBook](https://frontendmasters.com/guides/front-end-handbook/2024/)
 
-# Refactoring UI
+---
+class: text-sm
+---
+
+<h2 class= "text-teal-400"> Refactoring UI </h2>
 
 Refactoring UI is a design guide by Adam Wathan and Steve Schoger that teaches developers how to create beautiful, usable interfaces—without needing to be a designer.
 
@@ -148,181 +159,12 @@ Typography,
 Reusable design patterns,
 Real-world before/after UI makeovers
 
-## It’s especially useful for developers who want to level up their UI instincts without formal design training.
-
-# Functions
-
-- Functions are reusable blocks of code designed to perform a specific task.
-- They allow you to write cleaner, more modular, and maintainable code.
-
-Function Declaration
-
-<div grid="~ cols- gap-2" m="t-2">
-
-```js
-function greet(name) {
-  return `Hello, ${name}!`;
-}
-console.log(greet("Alice")); // Hello, Alice!
-```
-
-```js
-function calculateArea(width, height) {
-  return width * height;
-}
-console.log(calculateArea(5, 10)); // 50
-```
-
-Explanation:
-
-- function calculateArea(...) is a function declaration.
-- It takes two parameters: width and height.
-- It returns the area by multiplying them.
-  You can call it anywhere after (or even before) the declaration thanks to hoisting.
-  <!-- <img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt=""> -->
-  <!-- <img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt=""> -->
-
- </div>
-
-# Function Expression
-
-```js
-let functionName = function (parameters) {
-  //function body
-};
-```
-
-```js
-const add = function (a, b) {
-  return a + b;
-};
-console.log(add(2, 3)); // 5
-```
-
-```js
-const greet = function (name) {
-  return `Hello, ${name}`;
-};
-console.log(greet("Liam")); // Hello, Liam
-```
+It’s especially useful for developers who want to level up their UI instincts without formal design training.
 
 ---
-
-# Arrow Function
-
-```js
-const multiply = (a, b) => a * b;
-console.log(multiply(4, 5)); // 20
-```
-
-```js
-const createUser = (name, age) => ({
-  name: name,
-  age: age,
-});
-
-console.log(createUser("Alice", 30));
-// { name: 'Alice', age: 30 }
-```
-
-Default Parameters
-
-```js
-function sayHello(name = "Guest") {
-  return `Hello, ${name}`;
-}
-console.log(sayHello()); // Hello, Guest
-```
-
-```js
-function makeGreeting(name, message = `Hi ${name}, welcome!`) {
-  return message;
-}
-
-console.log(makeGreeting("John")); // Hi John, welcome!
-```
-
+src: ./pages/function.md
 ---
 
-# Rest Parameters
-
-```js
-function sum(...numbers) {
-  return numbers.reduce((a, b) => a + b, 0);
-}
-console.log(sum(1, 2, 3, 4)); // 10
-```
-
-```js
-function findMax(...numbers) {
-  return Math.max(...numbers);
-}
-console.log(findMax(3, 7, 2, 9, 5)); // 9
-```
-
-CallBack Function
-
-```js
-function processUserInput(callback) {
-  const name = "Jane";
-  callback(name);
-}
-processUserInput((name) => console.log(`Hi, ${name}`)); // Hi, Jane
-```
-
----
-
-# contd on CallBack Function
-
-```js
-function processArray(arr, callback) {
-  arr.forEach(callback);
-}
-
-function printElement(element) {
-  console.log(element);
-}
-
-const numbers = [1, 2, 3, 4, 5];
-processArray(numbers, printElement);
-// Output:
-//
-```
----
-
-# Immediately invoked Function Expression
-
-```js
-(function () {
-  console.log("This runs immediately!");
-})(); // This runs immediately!
-```
-
-Immediately invoked Function Expression with Parameters
-
-```js
-(function (name) {
-  console.log(`Hello, ${name}`);
-})("Alice");
-```
-
-Immediately invoked Function Expression assigned to a variable
-
-```js
-const result = (function (a, b) {
-  return a + b;
-})(5, 3);
-
-console.log(result); // 8
-```
-
-Arrow Function IIFE
-
-```js
-(() => {
-  console.log("Arrow function IIFE");
-})(); // Arrow function IIFE
-```
 ---
 src: ./pages/loops.md
 ---
