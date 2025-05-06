@@ -197,8 +197,11 @@ src: ./pages/dom.md
 ---
 src: ./pages/api.md
 ---
+
 ---
 layout: center
+class: text-sm
+hideInToc: true
 ---
 
 # [THANK YOU]{.text-8xl .text-teal-200 .tracking-wider}
