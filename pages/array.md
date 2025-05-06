@@ -40,11 +40,11 @@ class: text-sm
 <p></p>
 
 + To group related data
-- To loo through data easily
+- To loop through data easily
 + To manage list (e.g. a list of users, scores, products)
 
 
-Imagine trying to store 100 scroes without an array 😫
+Imagine trying to store 1000 scores without an array 😫
 
 ---
 class: text-sm
@@ -252,7 +252,7 @@ class: text-sm
 
 ### [Acessing Object Properties]{.text-teal-300}
 
-To access a proper of an obkect, you can use **dot notation** or **bracket notation**. Dot notation is the most commint way to access property.
+To access the property of an object, you can use **dot notation** or **bracket notation**. Dot notation is the most common way to access object property.
 
 ```js
 //Using Dot Notation
@@ -268,7 +268,7 @@ console.log(user["user"]);
 // output : "Zara"
 ```
 
-Bracket notation is useful when you want to access a propery name stored in a variable.
+Bracket notation is useful when you want to access a property name stored in a variable.
 ```js
 const key = "age";
 
@@ -291,7 +291,7 @@ console.log(user);
 //output: {name: "Zara", age: 30, location: "Lagos}
 ```
 
-Objects can also contain functions, which are called **methods**. Object methods are actions that can be performed on objects.
+Objects can also contain functions, which are called **methods**. <span class= "bg-black text-cyan-400 rounded-sm py-1 px-1.5"> Object methods are actions that can be performed on objects.</span>
 
 ```js
  let person ={

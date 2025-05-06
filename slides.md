@@ -62,6 +62,7 @@ hideInToc: true
 - Doris Senyah Afriyie
 - Adebomi Omodolapo Ademola
 - O-Oluyomi Boluwatife
+- Lateefat Bello
 
 ---
 hideInToc: true
@@ -111,33 +112,38 @@ Would you like a visual cheat sheet of these principles?
 </style>
 
 ---
+transition: fade-out
 class: text-sm
 ---
 
-<h2 class= "text-teal-400" >Frontend HandBook </h2>
+<h2 class= "text-teal-400">Frontend HandBook </h2>
 
-The Frontend Handbook is a guide that outlines best practices, tools, and knowledge areas for frontend developers. It serves as a roadmap for learning and improving in frontend development.
+The Frontend Handbook is a guide that outlines best practices, tools, and knowledge areas for frontend developers. 
 
-Key Components:
-Foundational Skills: Covers HTML, CSS, and JavaScript—the core of frontend.
+It serves as a roadmap for learning and improving in frontend development.
 
-Frameworks & Libraries: Introduces tools like React, Vue, or Angular.
+#### [Key Components:]{.text-teal-300}
 
-Tooling: Explains bundlers (Webpack, Vite), package managers, version control (Git), etc.
+- Foundational Skills: Covers HTML, CSS, and JavaScript—the core of frontend.
 
-Performance & Accessibility: Emphasizes speed and inclusive design.
+- Frameworks & Libraries: Introduces tools like React, Vue, or Angular.
 
-Architecture & Design Patterns: Guides you in building scalable, maintainable codebases.
+- Tooling: Explains bundlers (Webpack, Vite), package managers, version control (Git), etc.
 
-Testing & Deployment: Covers how to test code and ship to production.
+- Performance & Accessibility: Emphasizes speed and inclusive design.
 
-Career & Collaboration: Offers advice on working in teams, communication, and job roles.
+- Architecture & Design Patterns: Guides you in building scalable, maintainable codebases.
 
-It’s like a map for becoming a competent frontend developer—from beginner to advanced.
+- Testing & Deployment: Covers how to test code and ship to production.
+
+- Career & Collaboration: Offers advice on working in teams, communication, and job roles.
+
+<!-- It’s like a map for becoming a competent frontend developer—from beginner to advanced. -->
 
 #### [Frontend HandBook](https://frontendmasters.com/guides/front-end-handbook/2024/)
 
 ---
+transition: fade
 class: text-sm
 ---
 
@@ -145,18 +151,20 @@ class: text-sm
 
 Refactoring UI is a design guide by Adam Wathan and Steve Schoger that teaches developers how to create beautiful, usable interfaces—without needing to be a designer.
 
-Core Ideas:
-Design isn’t just about visuals—it's about clarity, hierarchy, and usability.
+[Core Ideas:]{.text-teal-300}
 
-Small tweaks = big impact: Improving spacing, alignment, contrast, and typography can transform a UI.
+- Design isn’t just about visuals: it's about clarity, hierarchy, and usability.
 
-Start with structure: Get layout and content right before worrying about colors or details.
+- Small tweaks = big impact: Improving spacing, alignment, contrast, and typography can transform a UI.
 
-Use systems: Consistent spacing, font sizes, and color scales make design easier and better.
+- Start with structure: Get layout and content right before worrying about colors or details.
 
-Refactor like code: Improve UI in iterations, just like refactoring messy code.
+- Use systems: Consistent spacing, font sizes, and color scales make design easier and better.
 
-Key Topics:
+- Refactor like code: Improve UI in iterations, just like refactoring messy code.
+
+[Key Topics:]{.text-teal-300}
+
 Visual hierarchy,
 Spacing and layout,
 Color usage and contrast,
@@ -164,7 +172,7 @@ Typography,
 Reusable design patterns,
 Real-world before/after UI makeovers
 
-It’s especially useful for developers who want to level up their UI instincts without formal design training.
+<!-- It’s especially useful for developers who want to level up their UI instincts without formal design training. -->
 
 ---
 src: ./pages/function.md
@@ -184,6 +192,10 @@ src: ./pages/promises.md
 
 ---
 src: ./pages/events.md
+---
+
+---
+src: ./pages/form.md
 ---
 
 ---

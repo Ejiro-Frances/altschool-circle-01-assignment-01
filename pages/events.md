@@ -144,7 +144,7 @@ element.removeEventListener(event, handler, [options | useCapture]);
 elem.addEventListener("click", function () {
   alert("First handler");
 });
-elem.addEventListenter("click", function () {
+elem.addEventListener("click", function () {
   alert("Second handler");
 });
 
