@@ -60,9 +60,8 @@ hideInToc: true
 - Ejiro Francess Ejoh
 - Salaudeen Rukayat Temitope
 - Doris Senyah Afriyie
+- Adebomi Omodolapo Ademola
 - O-Oluyomi Boluwatife
-- Name
-- Name
 
 ---
 hideInToc: true
@@ -84,7 +83,13 @@ In the First Week we discussed about using Learning How To Learn, Frontend HandB
 
 <h2 class= "text-teal-400">Learning How To Learn </h2>
 
-Learning how to learn means improving your ability to acquire and retain knowledge by understanding how your mind works. It involves: Metacognition: Being aware of and managing your learning strategies, Effective Techniques: Using spaced repetition, active recall, interleaving, and elaboration, Strategy Over Style: Choosing the right method for the material, not relying on learning "styles.", Feedback & Reflection: Regularly assessing and adjusting your approach, Environment & Motivation: Staying focused with clear goals and a good setup.
+- Learning how to learn means improving your ability to acquire and retain knowledge by understanding how your mind works. 
+- It involves: 
+  - Metacognition: Being aware of and managing your learning strategies, 
+  - Effective Techniques: Using spaced repetition, active recall, interleaving, and elaboration, 
+  - Strategy Over Style: Choosing the right method for the material, not relying on learning "styles.", 
+  - Feedback & Reflection: Regularly assessing and adjusting your approach, 
+  - Environment & Motivation: Staying focused with clear goals and a good setup.
 
 It’s about learning smarter, not just harder.
 
@@ -184,7 +189,19 @@ src: ./pages/events.md
 ---
 src: ./pages/modules.md
 ---
+ 
+---
+src: ./pages/dom.md
+---
 
 ---
 src: ./pages/api.md
 ---
+
+---
+layout: center
+class: text-sm
+hideInToc: true
+---
+
+# [THANK YOU]{.text-8xl .text-teal-200 .tracking-wider}

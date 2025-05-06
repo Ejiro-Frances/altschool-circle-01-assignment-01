@@ -1,25 +1,21 @@
 ---
 layout: center
-transition: fade-out
+transition: fade
 ---
 
 # [Making API calls]{.text-teal-400}
 
 ---
 class: text-sm
+hideInToc: true
 ---
 
-# [What is an API?]{.text-teal-400}
-
-<br>
+# [What is an API?]{.text-teal-300}
 
 An API (Application Programming Interface) is a set of rules that allows different software entities to communicate.  
 In web development, APIs enable your application to interact with external services. For example, fetching weather data, submitting forms, or retrieving user information.
 
-<br>
-
-## [Why Use APIs?]{.text-teal-400} 
-<br>
+## [Why Use APIs?]{.text-teal-300} 
 
 - Access external data and services. {v-click}
 - Enhance functionality without building from scratch. {v-click}
@@ -27,22 +23,17 @@ In web development, APIs enable your application to interact with external servi
 
 ---
 class: text-sm
+hideInToc: true
 ---
 
-# [Making API Calls in JavaScript]{.text-teal-400}
-
-<br>
+# [Making API Calls in JavaScript]{.text-teal-300}
 
 JavaScript provides several methods to make HTTP requests:
 
 - `fetch()` API: Modern and promise-based. 
 - Axios: A popular third-party library.
 
-<br>
-
 ## [Using the fetch() API]{.text-teal-400} 
-
-<br>
 
 The `fetch()` function allows you to make network requests, return a promise, and handle HTTPS responses.
 
@@ -59,11 +50,10 @@ fetch('https://api.example.com/data')
 
 ---
 class: text-sm
+hideInToc: true
 ---
 
 ## [Handling Responses] {.text-teal-400}
-
-<br>
 
 After making a request, handle the response appropriately:
 
@@ -89,11 +79,11 @@ fetch('https://api.example.com/data')
 
 ---
 class: text-sm
+hideInToc: true
 ---
 
 ### [Making POST Requests]{.text-teal-400}
 
-<br>
 To send data to the server, use POST requests:
 
 ```js
@@ -120,11 +110,11 @@ fetch('https://api.example.com/data', {
 
 ---
 class: text-sm
+hideInToc: true
 ---
 
 ### [Using Async/Await]{.text-teal-400}
 
-<br>
 Async/Await provides a cleaner syntax for handling Promises:
 
 ```js
@@ -146,11 +136,11 @@ fetchData();
 
 ---
 class: text-sm
+hideInToc: true
 ---
 
 # [Introducing Axios]{.text-teal-400}
 
-<br>
 Axios is a promise-based HTTP client that:
 
 - Automatically transforms JSON data.
@@ -170,11 +160,10 @@ axios.get('https://api.example.com/data')
 
 ---
 class: text-sm
+hideInToc: true
 ---
 
 ### [Making POST Requests with Axios]{.text-teal-400}
-
-<br>
 
 Sending data using Axios simplifies HTTP requests with concise syntax.
 
@@ -193,11 +182,11 @@ axios.post('https://api.example.com/data', {
 
 ---
 class: text-sm
+hideInToc: true
 ---
 
-### [Handling Errors]{.text-teal-400}
 
-<br>
+### [Handling Errors]{.text-teal-400}
 
 Always handle potential errors in API calls:
 
@@ -220,10 +209,12 @@ fetch('https://api.example.com/data')
 
 ---
 class: text-sm
+hideInToc: true
 ---
 
+
 ## [Working with API Keys]{.text-teal-400}
-<br>
+
 Some APIs require authentication using API keys:
 ```js
 fetch('https://api.example.com/data', {
