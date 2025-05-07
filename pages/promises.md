@@ -483,7 +483,7 @@ class: text-sm
 
 ## [Promisification]{.text-teal-300}
 
-Okay, so I learned about "promisification." It's basically turning a function that uses callbacks into one that returns a Promise. This is useful because Promises are often easier to work with than callbacks, especially when dealing with asynchronous operations.
+Okay, so I learned about "promisification." It's basically <span class="bg-black text-cyan-400 rounded-sm py-1 px-1.5">turning a function that uses callbacks into one that returns a Promise.</span> This is useful because Promises are often easier to work with than callbacks, especially when dealing with asynchronous operations.
 
 Here's a simple example:
 
@@ -580,7 +580,13 @@ class: text-sm
 
 ## [Microtasks]{.text-teal-300}
 
+In JavaScript, microtasks are a special kind of asynchronous task that are executed right after the current script finishes but before the next event loop tick. They are part of the JavaScript event loop mechanism, and they help in handling promise-based asynchronous operations with more predictability.
+
+
+
+
 Okay, so promises are always asynchronous. Even if a promise resolves immediately, the `.then`/`.catch`/`.finally` handlers don't run right away.
+
 
 ```javascript
 let promise = Promise.resolve();
@@ -588,7 +594,7 @@ promise.then(() => alert("promise done!"));
 alert("code finished");
 ```
 
-In this example, `"code finished"` alerts first because promise handlers go into a "microtask queue" (also called `PromiseJobs` in the ECMA specification). This queue is FIFO. The JavaScript engine only runs these microtasks after the current code finishes executing. So, after the `alert("code finished")` line runs, the engine checks the microtask queue and then runs the `.then` handler.
+In this example, `"code finished"` alerts first because promise handlers go into a "microtask queue" (also called  <span class="bg-black text-cyan-400 rounded-sm py-1 px-1.5">PromiseJobs</span> in the ECMA specification). This queue is FIFO. The JavaScript engine only runs these microtasks after the current code finishes executing. So, after the `alert("code finished")` line runs, the engine checks the microtask queue and then runs the `.then` handler.
 
 ---
 class: text-sm
@@ -611,6 +617,103 @@ window.addEventListener("unhandledrejection", (event) => alert(event.reason));
 
 In this example, the `unhandledrejection` event will fire and show the error message. Even if you add a `.catch` later using `setTimeout`, it's too late; the event has already triggered.
 
+
 ---
-src: ./async-await.md
+layout: center
+transition: fade
 ---
+
+# [Understanding Async & Await]{.text-teal-400}
+
+---
+hideInToc: true
+class: text-sm
+---
+
+# [What is Async/Await?]{.text-teal-400}
+
+Async/await is a modern way to handle asynchronous code in JavaScript.  
+It makes asynchronous code look and behave like synchronous code, making it easier to read and understand.
+
+### [Basic Syntax]{.text-teal-300}
+
+```js
+async function myFunction() {
+  const result = await someAsyncOperation();
+  console.log(result);
+}
+````
+
+* `async` keyword: declares an async function
+* `await`: pauses function execution until promise resolves
+
+### [Fetch API Example]{.text-teal-300}
+
+```js
+async function fetchData() {
+  const response = await fetch('https://api.example.com/data');
+  const data = await response.json();
+  console.log(data);
+}
+```
+
+---
+hideInToc: true
+class: text-sm
+---
+
+## [Error Handling with Try...Catch]{.text-teal-400}
+
+```js {all}{maxHeight:'150px'}
+async function getData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+```
+
+* Cleaner error handling
+* No `.catch()` chaining
+
+## [Async/Await vs Promises]{.text-teal-400}
+
+| Promises           | Async/Await    |
+| ------------------ | -------------- |
+| `.then()` chaining | Cleaner syntax |
+| Harder to read     | Easier to read |
+| `.catch()` needed  | `try...catch`  |
+
+
+---
+hideInToc: true
+class: text-sm
+---
+
+# [Key Takeaways]{.text-teal-300}
+
+* Async/await simplifies asynchronous code
+* Use `await` only inside async functions
+* Always handle errors with `try...catch`
+
+##
+
+# [Mini Demo: Simulate an Async Task]{.text-teal-300}
+
+```js
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function runDemo() {
+  console.log('Task starting...');
+  await wait(2000); // waits 2 seconds
+  console.log('Task completed after 2 seconds!');
+}
+
+runDemo();
+```
+

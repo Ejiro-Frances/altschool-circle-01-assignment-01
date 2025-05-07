@@ -15,13 +15,13 @@ transition: fade
 <v-click>
 <ul class= "mt-3">
 <li>Loops allow you to execute a block of code repeatedly.</li>
-<li>Loops can also be thought of like this: Imagine you have 5 apples and you eat one every day until none are left. You're repeating the same action—eating an apple—each day, as long as apples remain. That's the essence of a loop.</li>
+<li>Loops can also be thought of like this: Imagine you have 5 apples and you eat one every day until none are left. You're repeating the same action —eating an apple— each day, as long as apples remain. That's the essence of a loop.</li>
 </ul>
 </v-click>
 
 <v-click>
 <h4 class="text-teal-300 mt-3">Loop Declaration</h4>
-Let's break down what a loop looks like by identifying its three key parts: initialization, condition, and increment — using a for loop as an example.
+Let's break down what a loop looks like by identifying its three key parts:  <span class="text-cyan-300 bg-black rounded-sm py-1 px-1">initialization, condition, and increment</span> — using a <span class="text-cyan-300 bg-black rounded-sm py-1 px-1">for loop</span> as an example.
 <div grid="~ cols- gap-2" m="t-2">
 
 ```js
@@ -68,7 +68,7 @@ for (initialization; condition; increment) {
 
 <h5 class="text-teal-300 mt-3">Let's Break It Down:</h5>
 
-- Initialization: set a starting point(e.g. let i = 0)
+- Initialization: set a starting point (e.g. let i = 0)
 - Condition: 	Loop continues while this is true
 - Increment: increases a variable's value by 1 every time a loop runs.
 
