@@ -10,14 +10,15 @@ class: text-sm
 transition: fade
 ---
 
-<div class="grid grid-cols-2 gap-4">
-
-<div>
-<h3 class= "text-teal-400" >Functions</h3>
+### [Functions]{.text-teal-400}
 
 - Functions are reusable blocks of code designed to perform a specific task.
 - They allow you to write cleaner, more modular, and maintainable code.
 
+<br>
+
+<div class="grid grid-cols-2 gap-4">
+<div>
 <h5 class= "text-teal-300" >Function Declaration</h5>
 
 <div grid="~ cols- gap-2" m="t-2">
@@ -36,8 +37,8 @@ function calculateArea(width, height) {
 console.log(calculateArea(5, 10)); // 50
 ```
 <section class= "text-sm">
+ Explanation:
 <ul>
-Explanation:
 <li>function calculateArea(...) is a function declaration.</li>
 <li>It takes two parameters: width and height.</li>
 <li>It returns the area by multiplying them.</li>
@@ -78,7 +79,7 @@ console.log(greet("Liam")); // Hello, Liam
 </div>
 ---
 
-<h3 class= "text-teal-300" > Arrow Function </h3>
+<h3 class= "text-teal-300"> Arrow Function </h3>
 
 ```js
 const multiply = (a, b) => a * b;
